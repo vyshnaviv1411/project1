@@ -129,27 +129,29 @@ export const LoginScreen = ({ onLogin, onNext }: LoginScreenProps) => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Drag & drop your PDF resume or click to browse
                   </p>
-                  <input
-                    type="file"
-                    accept=".pdf"
-                    className="hidden"
-                    id="resume-upload"
-                    onChange={(e) => {
-                      const file = e.target.files?.[0];
-                      if (file) {
-                        console.log('Resume uploaded:', file.name);
-                        // Handle file upload here
-                      }
-                    }}
-                  />
-                  <Button 
-                    variant="outline" 
-                    className="mb-2"
-                    onClick={() => document.getElementById('resume-upload')?.click()}
-                  >
-                    <FileText className="mr-2 h-4 w-4" />
-                    Choose PDF File
-                  </Button>
+                  <label htmlFor="resume-upload" className="cursor-pointer">
+                    <input
+                      type="file"
+                      accept=".pdf,application/pdf"
+                      className="sr-only"
+                      id="resume-upload"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          console.log('Resume uploaded:', file.name, file.type);
+                          alert(`Selected file: ${file.name}`);
+                        }
+                      }}
+                    />
+                    <Button 
+                      variant="outline" 
+                      className="mb-2 pointer-events-none"
+                      type="button"
+                    >
+                      <FileText className="mr-2 h-4 w-4" />
+                      Choose PDF File
+                    </Button>
+                  </label>
                 </div>
                 
                 <div className="text-center">
