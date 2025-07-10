@@ -314,9 +314,6 @@ export const AdminDashboard = ({ onNext }: AdminDashboardProps) => {
                 You've experienced all the key features of our comprehensive student career platform.
                 From job discovery to resume analysis, application tracking to peer comparisons.
               </p>
-              <p className="text-sm text-muted-foreground mb-6">
-                Built by Team Vyshnavi – Centle Internship 2025
-              </p>
               <Button variant="hero" size="lg" onClick={onNext}>
                 Start Demo Again
               </Button>

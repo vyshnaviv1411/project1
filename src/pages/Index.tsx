@@ -94,14 +94,10 @@ const Index = () => {
             variant="hero" 
             size="lg" 
             onClick={() => setCurrentScreen('login')}
-            className="text-lg px-12 py-4 mb-6"
+            className="text-lg px-12 py-4"
           >
             Start Demo Experience
           </Button>
-          
-          <p className="text-white/70 text-sm">
-            Built by Team Vyshnavi – Centle Internship 2025
-          </p>
         </motion.div>
       </motion.div>
     </div>
