@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary Brand Colors - Professional Blue to Purple Gradient */
-    --primary: 217 91% 60%;
-    --primary-glow: 224 76% 68%;
+    /* Updated Primary Colors - Vibrant Purple to Teal */
+    --primary: 280 100% 70%;
+    --primary-glow: 200 100% 70%;
     --primary-foreground: 0 0% 98%;
 
-    /* Secondary Colors */
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    /* Secondary Colors - Soft Rose */
+    --secondary: 340 82% 52%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 280 100% 94%;
+    --accent-foreground: 280 100% 20%;
 
     /* Success & Error States */
-    --success: 142 71% 45%;
+    --success: 150 86% 65%;
     --success-foreground: 0 0% 98%;
     
-    --warning: 43 96% 56%;
+    --warning: 45 93% 58%;
     --warning-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     /* UI Elements */
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 217 91% 60%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 280 100% 70%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 68%));
-    --gradient-secondary: linear-gradient(135deg, hsl(240 4.8% 95.9%), hsl(240 5.9% 90%));
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(224 76% 68%) 50%, hsl(280 80% 70%) 100%);
+    /* Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(200 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(340 82% 52%), hsl(280 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(280 100% 70%) 0%, hsl(200 100% 70%) 50%, hsl(150 86% 65%) 100%);
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(217 91% 60% / 0.05);
-    --shadow-card: 0 4px 6px -1px hsl(217 91% 60% / 0.1), 0 2px 4px -1px hsl(217 91% 60% / 0.06);
-    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    /* Enhanced Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(280 100% 70% / 0.05);
+    --shadow-card: 0 4px 6px -1px hsl(280 100% 70% / 0.1), 0 2px 4px -1px hsl(280 100% 70% / 0.06);
+    --shadow-glow: 0 0 30px hsl(280 100% 70% / 0.4);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,20 +64,13 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: 280 100% 70%;
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 280 100% 70%;
   }
 
   .dark {
@@ -91,24 +84,24 @@ All colors MUST be HSL.
     --popover-foreground: 240 10% 3.9%;
 
     /* Keep consistent primary colors */
-    --primary: 217 91% 60%;
-    --primary-glow: 224 76% 68%;
+    --primary: 280 100% 70%;
+    --primary-glow: 200 100% 70%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 340 82% 52%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 45%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 280 100% 94%;
+    --accent-foreground: 280 100% 20%;
 
     /* Success & Error States */
-    --success: 142 71% 45%;
+    --success: 150 86% 65%;
     --success-foreground: 0 0% 98%;
     
-    --warning: 43 96% 56%;
+    --warning: 45 93% 58%;
     --warning-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
@@ -116,15 +109,15 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 217 91% 60%;
+    --ring: 280 100% 70%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 280 100% 70%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 280 100% 70%;
   }
 }
 
