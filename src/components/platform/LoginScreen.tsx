@@ -129,7 +129,24 @@ export const LoginScreen = ({ onLogin, onNext }: LoginScreenProps) => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Drag & drop your PDF resume or click to browse
                   </p>
-                  <Button variant="outline" className="mb-2">
+                  <input
+                    type="file"
+                    accept=".pdf"
+                    className="hidden"
+                    id="resume-upload"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        console.log('Resume uploaded:', file.name);
+                        // Handle file upload here
+                      }
+                    }}
+                  />
+                  <Button 
+                    variant="outline" 
+                    className="mb-2"
+                    onClick={() => document.getElementById('resume-upload')?.click()}
+                  >
                     <FileText className="mr-2 h-4 w-4" />
                     Choose PDF File
                   </Button>
