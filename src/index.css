@@ -2,35 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smart Job Aggregator Design System - Modern SaaS Platform
+/* Smart Job Aggregator Design System - Pastel Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 33% 94%; /* cream */
+    --foreground: 15 25% 20%; /* dark brown */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 33% 94%; /* cream */
+    --card-foreground: 15 25% 20%; /* dark brown */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 33% 94%; /* cream */
+    --popover-foreground: 15 25% 20%; /* dark brown */
 
-    /* Updated Primary Colors - Vibrant Purple to Teal */
-    --primary: 280 100% 70%;
-    --primary-glow: 200 100% 70%;
-    --primary-foreground: 0 0% 98%;
+    /* Pastel Primary Colors */
+    --primary: 15 25% 20%; /* dark brown */
+    --primary-glow: 330 25% 45%; /* plum */
+    --primary-foreground: 45 33% 94%; /* cream */
 
-    /* Secondary Colors - Soft Rose */
-    --secondary: 340 82% 52%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary Colors - Soft Pink */
+    --secondary: 5 70% 75%; /* soft pink */
+    --secondary-foreground: 15 25% 20%; /* dark brown */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 33% 94%; /* cream */
+    --muted-foreground: 15 25% 40%; /* dark brown with opacity */
 
-    --accent: 280 100% 94%;
-    --accent-foreground: 280 100% 20%;
+    --accent: 35 60% 90%; /* light peach */
+    --accent-foreground: 15 25% 20%; /* dark brown */
 
     /* Success & Error States */
     --success: 150 86% 65%;
@@ -43,59 +43,61 @@ All colors MUST be HSL.
     --destructive-foreground: 0 0% 98%;
 
     /* UI Elements */
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 280 100% 70%;
+    --border: 35 60% 90%; /* light peach */
+    --input: 35 60% 90%; /* light peach */
+    --ring: 330 25% 45%; /* plum */
 
-    /* Enhanced Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(200 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(340 82% 52%), hsl(280 100% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(280 100% 70%) 0%, hsl(200 100% 70%) 50%, hsl(150 86% 65%) 100%);
+    /* Pastel Gradients */
+    --gradient-primary: linear-gradient(135deg, #493129 0%, #8b597b 100%);
+    --gradient-secondary: linear-gradient(135deg, #8b597b 0%, #efa3a0 100%);
+    --gradient-hero: linear-gradient(135deg, #493129 0%, #8b597b 30%, #efa3a0 70%, #f1dec7 100%);
+    --gradient-pastel: linear-gradient(135deg, #f1e8db 0%, #f1dec7 50%, #efa3a0 100%);
     
-    /* Enhanced Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(280 100% 70% / 0.05);
-    --shadow-card: 0 4px 6px -1px hsl(280 100% 70% / 0.1), 0 2px 4px -1px hsl(280 100% 70% / 0.06);
-    --shadow-glow: 0 0 30px hsl(280 100% 70% / 0.4);
+    /* Soft Pastel Shadows */
+    --shadow-sm: 0 1px 3px 0 rgba(73, 49, 41, 0.1);
+    --shadow-card: 0 4px 6px -1px rgba(73, 49, 41, 0.1), 0 2px 4px -1px rgba(73, 49, 41, 0.06);
+    --shadow-glow: 0 0 30px rgba(139, 89, 123, 0.3);
+    --shadow-pastel: 0 8px 25px rgba(73, 49, 41, 0.08);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* Increased for softer look */
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 280 100% 70%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 280 100% 70%;
+    --sidebar-background: 45 33% 94%; /* cream */
+    --sidebar-foreground: 15 25% 20%; /* dark brown */
+    --sidebar-primary: 15 25% 20%; /* dark brown */
+    --sidebar-primary-foreground: 45 33% 94%; /* cream */
+    --sidebar-accent: 35 60% 90%; /* light peach */
+    --sidebar-accent-foreground: 15 25% 20%; /* dark brown */
+    --sidebar-border: 35 60% 90%; /* light peach */
+    --sidebar-ring: 330 25% 45%; /* plum */
   }
 
   .dark {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
+    --background: 15 25% 15%; /* darker version of dark brown */
+    --foreground: 45 33% 94%; /* cream */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 15 25% 20%; /* dark brown */
+    --card-foreground: 45 33% 94%; /* cream */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 15 25% 20%; /* dark brown */
+    --popover-foreground: 45 33% 94%; /* cream */
 
     /* Keep consistent primary colors */
-    --primary: 280 100% 70%;
-    --primary-glow: 200 100% 70%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 330 25% 45%; /* plum */
+    --primary-glow: 5 70% 75%; /* soft pink */
+    --primary-foreground: 45 33% 94%; /* cream */
 
-    --secondary: 340 82% 52%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 5 70% 75%; /* soft pink */
+    --secondary-foreground: 15 25% 20%; /* dark brown */
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
+    --muted: 15 25% 25%; /* darker muted */
+    --muted-foreground: 45 33% 70%; /* lighter cream */
 
-    --accent: 280 100% 94%;
-    --accent-foreground: 280 100% 20%;
+    --accent: 35 60% 85%; /* slightly darker light peach */
+    --accent-foreground: 15 25% 20%; /* dark brown */
 
     /* Success & Error States */
     --success: 150 86% 65%;
@@ -107,17 +109,17 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 280 100% 70%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 280 100% 70%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 280 100% 70%;
+    --border: 15 25% 30%; /* darker border */
+    --input: 15 25% 30%; /* darker input */
+    --ring: 330 25% 45%; /* plum */
+    --sidebar-background: 15 25% 15%; /* darker version of dark brown */
+    --sidebar-foreground: 45 33% 94%; /* cream */
+    --sidebar-primary: 330 25% 45%; /* plum */
+    --sidebar-primary-foreground: 45 33% 94%; /* cream */
+    --sidebar-accent: 15 25% 25%; /* darker accent */
+    --sidebar-accent-foreground: 45 33% 94%; /* cream */
+    --sidebar-border: 15 25% 30%; /* darker border */
+    --sidebar-ring: 330 25% 45%; /* plum */
   }
 }
 
@@ -134,20 +136,20 @@ All colors MUST be HSL.
 @layer components {
   /* Button Variants */
   .btn-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-glow to-purple-500 text-primary-foreground shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-pastel-dark-brown via-pastel-plum to-pastel-soft-pink text-pastel-cream shadow-lg hover:shadow-pastel transition-all duration-300 hover:scale-105 rounded-2xl;
   }
   
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground shadow-card hover:shadow-glow border-0 transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-pastel-dark-brown to-pastel-plum text-pastel-cream shadow-pastel hover:shadow-glow border-0 transition-all duration-300 hover:scale-105 rounded-2xl;
   }
 
   /* Card Variants */
   .card-gradient {
-    @apply bg-gradient-to-br from-card via-card to-muted border border-border/50 shadow-card hover:shadow-glow transition-all duration-300;
+    @apply bg-gradient-to-br from-pastel-cream via-pastel-light-peach to-white border border-pastel-light-peach/50 shadow-pastel hover:shadow-glow transition-all duration-300 rounded-2xl;
   }
   
   .card-hover {
-    @apply hover:scale-[1.02] hover:shadow-glow transition-all duration-300 cursor-pointer;
+    @apply hover:scale-[1.02] hover:shadow-pastel transition-all duration-300 cursor-pointer rounded-2xl;
   }
 
   /* Animation Classes */
@@ -165,12 +167,12 @@ All colors MUST be HSL.
 
   /* Gradient Text */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-glow to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-pastel-dark-brown via-pastel-plum to-pastel-soft-pink bg-clip-text text-transparent;
   }
 
   /* Glow Effects */
   .glow-primary {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 20px rgba(139, 89, 123, 0.3);
   }
 }
 

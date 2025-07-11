@@ -19,6 +19,14 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Custom Pastel Palette
+				pastel: {
+					'dark-brown': '#493129',
+					'plum': '#8b597b',
+					'soft-pink': '#efa3a0',
+					'light-peach': '#f1dec7',
+					'cream': '#f1e8db',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -75,12 +83,14 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-pastel': 'var(--gradient-pastel)'
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
 				'glow': 'var(--shadow-glow)',
-				'sm': 'var(--shadow-sm)'
+				'sm': 'var(--shadow-sm)',
+				'pastel': 'var(--shadow-pastel)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

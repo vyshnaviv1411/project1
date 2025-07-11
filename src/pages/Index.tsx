@@ -31,7 +31,7 @@ const Index = () => {
   };
 
   const renderIntroScreen = () => (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-pastel flex items-center justify-center p-6">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const Index = () => {
         className="text-center max-w-4xl mx-auto"
       >
         <motion.h1 
-          className="text-6xl font-bold text-white mb-6"
+          className="text-6xl font-bold text-pastel-dark-brown mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -48,7 +48,7 @@ const Index = () => {
         </motion.h1>
         
         <motion.p 
-          className="text-xl text-white/90 mb-8 leading-relaxed"
+          className="text-xl text-pastel-dark-brown/80 mb-8 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -63,24 +63,24 @@ const Index = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <Card className="bg-white/10 border-white/20 backdrop-blur-md">
-            <CardContent className="p-6 text-center text-white">
-              <h3 className="text-lg font-semibold mb-2">🎯 Smart Job Discovery</h3>
-              <p className="text-sm text-white/80">AI-powered job matching with skill analysis</p>
+          <Card className="bg-pastel-cream/80 border-pastel-light-peach/50 backdrop-blur-md shadow-pastel rounded-2xl hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2 text-pastel-dark-brown">🎯 Smart Job Discovery</h3>
+              <p className="text-sm text-pastel-dark-brown/70">AI-powered job matching with skill analysis</p>
             </CardContent>
           </Card>
           
-          <Card className="bg-white/10 border-white/20 backdrop-blur-md">
-            <CardContent className="p-6 text-center text-white">
-              <h3 className="text-lg font-semibold mb-2">📊 Resume Analytics</h3>
-              <p className="text-sm text-white/80">Deep insights and peer comparisons</p>
+          <Card className="bg-pastel-cream/80 border-pastel-light-peach/50 backdrop-blur-md shadow-pastel rounded-2xl hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2 text-pastel-dark-brown">📊 Resume Analytics</h3>
+              <p className="text-sm text-pastel-dark-brown/70">Deep insights and peer comparisons</p>
             </CardContent>
           </Card>
           
-          <Card className="bg-white/10 border-white/20 backdrop-blur-md">
-            <CardContent className="p-6 text-center text-white">
-              <h3 className="text-lg font-semibold mb-2">🚀 Career Tracking</h3>
-              <p className="text-sm text-white/80">Complete application and growth management</p>
+          <Card className="bg-pastel-cream/80 border-pastel-light-peach/50 backdrop-blur-md shadow-pastel rounded-2xl hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2 text-pastel-dark-brown">🚀 Career Tracking</h3>
+              <p className="text-sm text-pastel-dark-brown/70">Complete application and growth management</p>
             </CardContent>
           </Card>
         </motion.div>
@@ -94,7 +94,7 @@ const Index = () => {
             variant="hero" 
             size="lg" 
             onClick={() => setCurrentScreen('login')}
-            className="text-lg px-12 py-4"
+            className="text-lg px-12 py-4 bg-gradient-to-r from-pastel-dark-brown to-pastel-plum text-pastel-cream shadow-pastel hover:shadow-lg transition-all duration-300 hover:scale-105 rounded-2xl"
           >
             Start Demo Experience
           </Button>
@@ -140,7 +140,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-pastel-cream text-pastel-dark-brown">
       {renderCurrentScreen()}
       
       {currentScreen !== 'intro' && (
