@@ -8,30 +8,47 @@ import { Mail, Upload, FileText, Globe } from 'lucide-react';
 
 interface LoginScreenProps {
   onLogin: (user: any) => void;
-  onNext: () => void;
+  onNext: (user?: any) => void;
 }
 
 export const LoginScreen = ({ onLogin, onNext }: LoginScreenProps) => {
   const [email, setEmail] = useState('');
   const [showOtp, setShowOtp] = useState(false);
   const [showResumeUpload, setShowResumeUpload] = useState(false);
+  const [userType, setUserType] = useState<'student' | 'admin' | null>(null);
 
-  const handleGoogleLogin = () => {
-    const user = { name: 'Alex Johnson', email: 'alex.johnson@university.edu' };
+  const handleGoogleLogin = (type: 'student' | 'admin') => {
+    const user = { 
+      name: type === 'admin' ? 'Admin User' : 'Alex Johnson', 
+      email: type === 'admin' ? 'admin@university.edu' : 'alex.johnson@university.edu',
+      role: type
+    };
     onLogin(user);
-    setShowResumeUpload(true);
+    if (type === 'student') {
+      setShowResumeUpload(true);
+    } else {
+      onNext(user); // Skip resume upload for admin
+    }
   };
 
   const handleEmailOtp = () => {
-    if (email) {
+    if (email && userType) {
       setShowOtp(true);
     }
   };
 
   const handleOtpVerify = () => {
-    const user = { name: 'Alex Johnson', email: email };
+    const user = { 
+      name: userType === 'admin' ? 'Admin User' : 'Alex Johnson', 
+      email: email,
+      role: userType
+    };
     onLogin(user);
-    setShowResumeUpload(true);
+    if (userType === 'student') {
+      setShowResumeUpload(true);
+    } else {
+      onNext(user); // Skip resume upload for admin
+    }
   };
 
   const handleResumeUpload = () => {
@@ -53,19 +70,55 @@ export const LoginScreen = ({ onLogin, onNext }: LoginScreenProps) => {
           </CardHeader>
           
           <CardContent className="space-y-6">
-            {!showOtp && !showResumeUpload && (
+            {!userType && !showOtp && !showResumeUpload && (
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="space-y-4"
               >
+                <h3 className="text-lg font-semibold text-center mb-4">Choose Your Login Type</h3>
+                
                 <Button 
                   variant="gradient" 
                   className="w-full" 
-                  onClick={handleGoogleLogin}
+                  onClick={() => setUserType('student')}
+                >
+                  Student Login
+                </Button>
+                
+                <Button 
+                  variant="secondary" 
+                  className="w-full" 
+                  onClick={() => setUserType('admin')}
+                >
+                  Admin Login
+                </Button>
+              </motion.div>
+            )}
+
+            {userType && !showOtp && !showResumeUpload && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="space-y-4"
+              >
+                <div className="text-center">
+                  <h3 className="text-lg font-semibold capitalize">{userType} Login</h3>
+                  <button 
+                    onClick={() => setUserType(null)}
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    ← Back to login options
+                  </button>
+                </div>
+
+                <Button 
+                  variant="gradient" 
+                  className="w-full" 
+                  onClick={() => handleGoogleLogin(userType)}
                 >
                   <Globe className="mr-2 h-5 w-5" />
-                  Continue with Google
+                  Continue with Google as {userType === 'admin' ? 'Admin' : 'Student'}
                 </Button>
                 
                 <div className="relative">

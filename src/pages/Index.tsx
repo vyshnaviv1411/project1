@@ -108,7 +108,16 @@ const Index = () => {
       case 'intro':
         return renderIntroScreen();
       case 'login':
-        return <LoginScreen onLogin={setUser} onNext={() => setCurrentScreen('dashboard')} />;
+        return <LoginScreen 
+          onLogin={setUser} 
+          onNext={(user) => {
+            if (user?.role === 'admin') {
+              setCurrentScreen('admin');
+            } else {
+              setCurrentScreen('dashboard');
+            }
+          }} 
+        />;
       case 'dashboard':
         return <Dashboard user={user} onNavigate={setCurrentScreen} />;
       case 'roleExplainer':
